@@ -110,54 +110,30 @@ header{
   justify-content: flex-end;
 }
 
-.menu li{
+.menu a{
   margin-left: 30px;
-  position: relative;
 }
 
-.menu li::before{
-  content: '';
-  position: absolute;
-  border: .7px solid olive;
-  opacity: 0;
-  width: 0;
-  left: 50%;
-  bottom: 0;
-}
-
-.menu li::after{
-  content: '';
-  position: absolute;
-  border: .7px solid olive;
-  opacity: 0;
-  width: 0;
-  right: 50%;
-  bottom: 0;
-}
-
-.menu li:hover::before , .menu li:hover::after{
-  opacity: 1;
-  width: 50%;
-  transition: .5s;
+.menu a:hover{
+  border-bottom: 1px solid;
 }
 
 main{
   padding: 60px 0;
 }
 
-#about .flexbox{
+main .flexbox{
   padding-bottom: 70px;
-  align-items: center;
 }
 
-#about .txt{
+main .txt{
   line-height: 1.8em;
   letter-spacing: .25em;
   font-size: 16px;
   margin: 40px 0;
 }
 
-#about .img{
+main .img{
   width: 25%;
 
 }
@@ -167,7 +143,7 @@ main{
   margin-right: 40px;
 }
 
-#about li{
+main li{
   padding-bottom:10px;
 }
 
@@ -196,4 +172,20 @@ footer{
 footer p{
   margin-top: 30px;
   font-size: 12px;
+}
+
+.return a{
+  display: inline-block;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: darkolivegreen;
+  padding: 14px 20px;
+  border-radius: 50%;
+}
+
+.return a:hover{
+  background: #333;
+  border: 1px solid darkolivegreen;
 }

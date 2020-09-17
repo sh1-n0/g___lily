@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+
+
+body{
+  background-color: #333;
+  color: azure;
+}
+
+.flexbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.box{
+  display: flex;
+}
+
+h2{
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 80px;
+  letter-spacing: .25em;
+}
+
+.line{
+  display: table;
+  margin: 20px auto;
+  position: relative;
+}
+
+.line::before{
+  content: "";
+  position: absolute;
+  border-bottom: .4em solid rgba(106, 142, 35, 0.466);
+  border-radius: 4px;
+  width: calc(100% + .75em);
+  bottom: 25px;
+  left: -.5em;
+  opacity: .5;
+  z-index: -1;
+}
+
+section{
+  padding: 70px 0;
+}
+
+.inner{
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+#return{
+  display: none;
+  position: fixed;
+  left: 50%;
+  /* bottom: -100px; */
+  transform: translateX(-50%);
+  cursor: pointer;
+  background: darkolivegreen;
+  opacity: .6;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid darkolivegreen;
+  z-index: 100;
+}
+
+#return::before{
+  content: '';
+  position: absolute;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  top: 20px;
+  left: calc(50% - 7.5px);
+}
+
+#return.re-hover{
+  opacity: 1;
+  transition: .6s;
+}
+
+#return.in{
+  display: block;
+  bottom: 10%;
+  transition: .5s;
+}
+
+/* header部分style */
+
+header{
+  padding: 50px 0;
+}
+
+.header-top{
+  margin: 30px auto;
+}
+
+.header-left h1{
+font-family: source-sans-pro, sans-serif;
+font-weight: 700;
+font-style: normal;
+font-size: 35px;
+font-weight: bold;
+}
+
+.header-right a{
+  display: inline-block;
+  padding: 5px 10px;
+  background: black;
+  border: 1px solid #333;
+  margin: 0 5px;
+}
+
+.header-right a:hover{
+  background: #333;
+  border: 1px solid;
+}
+
+.header-right .twitter:hover{
+  color: deepskyblue;
+}
+
+.header-right .insta:hover{
+  color: tomato;
+  border-color: deeppink;
+  border-top-color: darkviolet;
+  border-bottom-color: orange;
+}
+
+.header-right .note:hover{
+  color: mediumaquamarine;
+}
+
+.menu{
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: .08em;
+  margin: 30px 0;
+}
+
+.header-mid .box{
+  justify-content: flex-end;
+}
+
+.menu li{
+  margin-left:30px;
+  position: relative;
+}
+
+.menu li ::before{
+  content: "";
+  position: absolute;
+  border: .7px solid olive;
+  opacity: 0;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+}
+
+.menu li ::after{
+  content: "";
+  position: absolute;
+  border: .7px solid olive;
+  opacity: 0;
+  width: 0;
+  right: 50%;
+  bottom: 0;
+}
+
+.menu a:hover::before , .menu a:hover::after{
+  opacity: 1;
+  width: 50%;
+  transition: .5s;
+}
+
+
+/* header部分style　終了 */
+
+.header-bottom{
+  background: url(../img/lilly.jpg) center center / cover;
+  height: 70vh;
+}
+
+.skil{
+  text-align: center;
+  margin: 0 20px;
+  width: calc(30% - 30px);
+}
+
+.skil i{
+  padding: 40px 0;
+}
+
+.skil .ja{
+  position: relative;
+  font-size: 23px;
+  letter-spacing: .2em;
+}
+
+.skil .code::after{
+  content: "Cordeing";
+  position: absolute;
+  font-size: .7em;
+  letter-spacing: .25em;
+  color: silver;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skil .dictation::after{
+  content: "Dictation";
+  position: absolute;
+  font-size: .7em;
+  letter-spacing: .25em;
+  color: silver;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skil .write::after{
+  content: "Writing";
+  position: absolute;
+  font-size: .7em;
+  letter-spacing: .25em;
+  color: silver;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skil-txt{
+  font-size: 15px;
+}
+
+#portfolio a{
+  display: inline-block;
+  width: calc(30% - 30px);
+  margin: 30px;
+}
+
+/* footer部分style */
+
+footer{
+  padding: 130px 0 50px;
+  position: relative;
+}
+
+footer p{
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+
+
+/* footer部分style終了*/
